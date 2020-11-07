@@ -4,15 +4,16 @@ import { Link } from 'react-router-dom';
 
 
 function RenderLeader({leader}){
-    return (<div className="row" key={leader.id}>
-        <div className="col-3">
-            <img src={leader.image} alt="20"/>
+    return (
+    <div className="row my-2" key={leader.id}>
+        <div className="col-2">
+            <img src={leader.image} width="100%"/>
         </div>
         <div className="col-8">
             <h5>{leader.name}</h5>
             <p>{leader.designation}</p>
             <p>{leader.description}</p>
-            </div>
+        </div>
     </div>
     )
 }
@@ -20,8 +21,7 @@ function About(props) {
 
     const leaders = props.leaders.map((leader) => {
         return (
-           <RenderLeader leader={leader}/>
-            
+           <RenderLeader leader={leader}/>      
         );
     });
 
