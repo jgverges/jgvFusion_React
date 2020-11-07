@@ -54,11 +54,8 @@ import About from './AboutComponent';
           <Header />
           <Switch>
             <Route path='/home' component={HomePage}/>
-            <Route exact path='/menu' 
-                  component={() => 
-                    <Menu dishes={this.state.dishes}/>
-                    }
-            /> 
+            <Route exact path='/menu' component={() => 
+                    <Menu dishes={this.state.dishes}/>} /> 
             <Route exact path='/contactus' component={Contact} />
             <Route path='/menu/:dishId' component={DishWithId}/>
             <Route path='/aboutus' component={AboutPage}/>
