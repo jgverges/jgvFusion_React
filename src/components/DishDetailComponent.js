@@ -70,7 +70,7 @@ const  DishDetail = (props) => {
                 <RenderComments comments={props.comments} />
 
                 <CommentForm/>
-
+                
             </div>
         </div>
         </div>
@@ -180,11 +180,12 @@ class CommentForm extends React.Component{
             <Nav className="ml-auto" navbar>
                     <NavItem>
                         <Button outline onClick={this.toggleModal}>
-                            <span className="fa fa-sign-in fa-lg"></span>
+                            <span className="fa fa-pencil mr-2"></span>
                              Submit Comments
                         </Button>
                     </NavItem>
             </Nav>
+           
 
             <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
                 <ModalHeader toggle={this.toggleModal}>Submit Comment</ModalHeader>
