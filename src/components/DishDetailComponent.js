@@ -84,6 +84,7 @@ else
 export default  DishDetail;
 
 
+/**********  CommentForm ******************************* */
 
 class CommentForm extends React.Component{
     constructor(props) {
@@ -113,7 +114,9 @@ class CommentForm extends React.Component{
       
       handleComments(event) {
         this.toggleModal();
-        alert("Rating: " + this.rating.value + " Name: " + this.name.value
+        alert("Rating: " + this.rating.value + 
+              " Name: " + this.name.value +
+              "Comment: "+ this.comment.value
             );
         event.preventDefault();
 
@@ -136,14 +139,26 @@ class CommentForm extends React.Component{
                 <ModalBody>
                 <Form onSubmit={this.handleComments}>
                         <FormGroup>
-                            <Label htmlFor="rating">Rating</Label>
-                            <Input type="number" id="rating" name="rating"
-                                innerRef={(input) => this.rating = input} />
+                            <Label htmlFor="rating">Rating</Label>                            
+                            <Input type="select" id="rating" name="rating"
+                                innerRef={(input) => this.rating = input} >
+                                <option value="1">1</option> 
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                </Input>
                         </FormGroup>
                         <FormGroup>
                             <Label htmlFor="name">Your Name</Label>
                             <Input type="name" id="name" name="name"
                                 innerRef={(input) => this.name = input}  />
+                        </FormGroup>
+                        <FormGroup>
+                            <Label htmlFor="comment">Comment</Label>
+                            <Input type="textarea" id="comment" name="comment"
+                                innerRef={(input) => this.comment = input} 
+                                rows="6" />
                         </FormGroup>
                        
                         <Button type="submit" value="submit" color="primary">Submit</Button>
