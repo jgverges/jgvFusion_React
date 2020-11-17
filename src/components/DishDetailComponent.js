@@ -157,10 +157,10 @@ class CommentForm extends React.Component{
                         </Col>
                     </Row>
                     <Row className="form-group">
-                        <Label htmlFor="name">Your Name</Label>
+                        <Label htmlFor="author">Your Name</Label>
                         <Col md={10}>
-                            <Control.text model=".name" id="name" name="name"                                       
-                                placeholder="Name"
+                            <Control.text model=".author" id="author" name="author"                                       
+                                placeholder="author"
                                 className="form-control"
                                 validators={{
                                     required, minLength: minLength(3), maxLength: maxLength(15)
@@ -168,7 +168,7 @@ class CommentForm extends React.Component{
                                 />
                             <Errors
                                 className="text-danger"
-                                model=".name"
+                                model=".author"
                                 show="touched"
                                 messages={{
                                     required: 'Required',
@@ -207,6 +207,7 @@ class CommentForm extends React.Component{
                     </Col>
                     </Row>
                 </LocalForm>
+
 
                 </ModalBody>
             </Modal>
