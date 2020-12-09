@@ -4,13 +4,13 @@ import { Button,Card, CardImg, CardText, CardBody, CardTitle,Col, Breadcrumb, Br
 import { Link } from 'react-router-dom';
 import { Control, LocalForm, Errors } from 'react-redux-form';
 import { Loading } from './LoadingComponent';
-
+import { baseUrl } from '../shared/baseUrl';
 
 
 const RenderDish = ({dish})=> {
     return(
         <Card>
-            <CardImg top src={dish.image} alt={dish.name} />
+            <CardImg top src={baseUrl + dish.image} alt={dish.name} />
             <CardBody>
                 <CardTitle tag ='h4' >{dish.name}</CardTitle>
                 <CardText>{dish.description}</CardText>
@@ -53,6 +53,7 @@ const RenderComments = ({comments, addComment, dishId}) => {
 
 
 const  DishDetail = (props) => {
+    console.warn(props)
     if (props.isLoading) {
         return(
             <div className="container">
