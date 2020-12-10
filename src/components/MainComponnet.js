@@ -21,7 +21,8 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToProps = dispatch => ({
-  addComment: (dishId, rating, author, comment) => dispatch(addComment(dishId, rating, author, comment)),
+  addComment: (dishId, rating, author, comment) => 
+              dispatch(addComment(dishId, rating, author, comment)),
   fetchDishes: () => { dispatch(fetchDishes())},
   resetFeedbackForm: () => { dispatch(actions.reset('feedback'))},
   fetchComments: () => dispatch(fetchComments()),
@@ -48,16 +49,17 @@ class Main extends React.Component {
           promosErrMess={this.props.promotions.errMess}
           leader={this.props.leaders.filter((leader) => leader.featured)[0]}
         />
-        /* promos with ssssssssssssss , not promo !! */
       );
     }
 
     const DishWithId = ({match}) => {
+      console.log("*** match ", match, '* dishes', this.props.dishes.dishes);
+      
       return(
-          <DishDetail dish={this.props.dishes.dishes.filter((dish) => dish.id === parseInt(match.params.dishId,10))[0]}
+          <DishDetail dish={this.props.dishes.dishes.filter((dish) => dish.id == parseInt(match.params.dishId,10))[0]}
             isLoading={this.props.dishes.isLoading}
             errMess={this.props.dishes.errMess}
-            comments={this.props.comments.comments.filter((comment) => comment.dishId === parseInt(match.params.dishId,10))}
+            comments={this.props.comments.comments.filter((comment) => comment.dishId == parseInt(match.params.dishId,10))}
             commentsErrMess={this.props.comments.errMess}
             addComment={this.props.addComment}
           />

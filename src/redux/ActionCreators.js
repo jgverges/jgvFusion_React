@@ -1,5 +1,4 @@
 import * as ActionTypes from './ActionTypes';
-import {DISHES} from '../shared/dishes';
 import { baseUrl } from '../shared/baseUrl';
 
 
@@ -12,13 +11,14 @@ export const addComment = (dishId, rating, author, comment) => ({
         comment: comment
     }
 });
+
 export const fetchDishes = () => (dispatch) => {
 
     dispatch(dishesLoading(true));
 
     return fetch(baseUrl + 'dishes')
-    .then(response => response.json())
-    .then(dishes => dispatch(addDishes(dishes)));
+            .then(response => response.json())
+            .then(dishes => dispatch(addDishes(dishes)));
 
 }
 
@@ -37,8 +37,8 @@ export const addDishes = (dishes) => ({
 });
 export const fetchComments = () => (dispatch) => {    
     return fetch(baseUrl + 'comments')
-    .then(response => response.json())
-    .then(comments => dispatch(addComments(comments)));
+            .then(response => response.json())
+            .then(comments => dispatch(addComments(comments)));
 };
 
 export const commentsFailed = (errmess) => ({
@@ -56,8 +56,8 @@ export const fetchPromos = () => (dispatch) => {
     dispatch(promosLoading());
 
     return fetch(baseUrl + 'promotions')
-    .then(response => response.json())
-    .then(promos => dispatch(addPromos(promos)));
+            .then(response => response.json())
+            .then(promos => dispatch(addPromos(promos)));
 }
 
 export const promosLoading = () => ({

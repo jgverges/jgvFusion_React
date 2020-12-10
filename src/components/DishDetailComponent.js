@@ -50,10 +50,8 @@ const RenderComments = ({comments, addComment, dishId}) => {
     }
 }    
 
-
-
 const  DishDetail = (props) => {
-    console.warn(props)
+    console.warn('*****props',props,'******')
     if (props.isLoading) {
         return(
             <div className="container">
@@ -66,7 +64,7 @@ const  DishDetail = (props) => {
     else if (props.errMess) {
         return(
             <div className="container">
-                <div className="row">            
+                <div className="row">  *************          
                     <h4>{props.errMess}</h4>
                 </div>
             </div>
@@ -108,7 +106,6 @@ else
             <div></div>
         );
     } 
-
 export default  DishDetail;
 
 
