@@ -53,7 +53,7 @@ const RenderComments = ({comments, postComment, dishId}) => {
             <CommentForm
                     postComment = {postComment}
                     dishId = {dishId}
-                />
+            />
             </div>
     }
     else {
@@ -74,8 +74,9 @@ const  DishDetail = (props) => {
             </div>
         );
     }
-    else if (props.errMess) {
-        return(
+    else if (props.errMess || props.commentsErrMess) {
+        if (props.commentsErrMess) return <h4>{props.commentsErrMess}</h4>
+        else return(
             <div className="container">
                 <div className="row">            
                     <h4>{props.errMess}</h4>
@@ -105,7 +106,8 @@ const  DishDetail = (props) => {
             </div>
             <div className="col-12 col-md-5 m-1">
 
-                <RenderComments comments={props.comments} 
+                <RenderComments 
+                    comments = {props.comments} 
                     postComment = {props.postComment}
                     dishId = {props.dish.id}
                 />
