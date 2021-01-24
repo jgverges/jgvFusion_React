@@ -60,7 +60,7 @@ export class Contact extends Component {
                         BARCELONA<br />
                         <i className="fa fa-phone"></i>: +852 1234 5678<br />
                         <i className="fa fa-fax"></i>: +852 8765 4321<br />
-                        <i className="fa fa-envelope"></i>: <a href="mailto:confusion@food.net">confusion@food.net</a>
+                        <i className="fa fa-envelope"></i>: <a href="mailto:JGV@food.net">JGV@food.net</a>
                         </address>
                 </div>
                 <div className="col-12 col-sm-6 offset-sm-1">
@@ -71,7 +71,7 @@ export class Contact extends Component {
                         <a role="button" className="btn btn-primary" href="tel:+85212345678"><i className="fa fa-phone"></i> Call</a>
                         {/* Link to skipe doesn't works, is redirect to telf not to skipe */}
                         <a role="button" className="btn btn-info" href="tel:+85212345678"><i className="fa fa-skype"></i> Skype</a>
-                        <a role="button" className="btn btn-success" href="mailto:confusion@food.net"><i className="fa fa-envelope-o"></i> Email</a>
+                        <a role="button" className="btn btn-success" href="mailto:JGV@food.net"><i className="fa fa-envelope-o"></i> Email</a>
                     </div>
                 </div>
             </div>

@@ -4,7 +4,7 @@ export const COMMENTS =
         id: 0,
         dishId: 0,
         rating: 5,
-        comment: "Imagine all the eatables, living in conFusion!",
+        comment: "Imagine all the eatables, living in JGV!",
         author: "John Lemon",
         date: "2012-10-16T17:57:28.556094Z"
     },
@@ -44,7 +44,7 @@ export const COMMENTS =
         id: 5,
         dishId: 1,
         rating: 5,
-        comment: "Imagine all the eatables, living in conFusion!",
+        comment: "Imagine all the eatables, living in JGV!",
         author: "John Lemon",
         date: "2012-10-16T17:57:28.556094Z"
     },
@@ -84,7 +84,7 @@ export const COMMENTS =
         id: 10,
         dishId: 2,
         rating: 5,
-        comment: "Imagine all the eatables, living in conFusion!",
+        comment: "Imagine all the eatables, living in JGV!",
         author: "John Lemon",
         date: "2012-10-16T17:57:28.556094Z"
     },
@@ -124,7 +124,7 @@ export const COMMENTS =
         id: 15,
         dishId: 3,
         rating: 5,
-        comment: "Imagine all the eatables, living in conFusion!",
+        comment: "Imagine all the eatables, living in JGV!",
         author: "John Lemon",
         date: "2012-10-16T17:57:28.556094Z"
     },
