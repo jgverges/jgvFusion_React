@@ -12,11 +12,11 @@ const store = ConfigureStore();
     render() {
       return (
         <Provider store={store}>
-        <BrowserRouter>
-          <div className="App">
-            <Main />
-          </div>
-        </BrowserRouter>
+          <BrowserRouter>
+            <div className="App">
+              <Main />
+            </div>
+          </BrowserRouter>
       </Provider>)
     }
   }
